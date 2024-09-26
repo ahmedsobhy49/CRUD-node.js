@@ -16,7 +16,7 @@ export default function DataTable({ state, dispatch }) {
     return fetchProducts(state.search);
   });
 
-  const phones = data?.data;
+  const phones = data?.data?.data;
 
   const { mutate: mutateDelete } = useMutation(deleteProduct, {
     onSuccess: () => {
